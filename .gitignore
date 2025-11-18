@@ -1,0 +1,15 @@
+# OS / éditeur
+.DS_Store
+.idea/
+.vscode/
+
+# Dépendances PHP (si un jour tu ajoutes Composer)
+vendor/
+
+# Logs / temporaires
+*.log
+tmp/
+cache/
+
+# Env / secrets (si tu en ajoutes)
+.env

@@ -1,16 +1,12 @@
 <?php
-// public/index.php
-
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// URL de base (jusqu'au dossier public)
+// Calcul de BASE_URL
 $baseUrl = rtrim(str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']), '/');
-
-// On rend dispo partout
 define('BASE_URL', $baseUrl);
 
-// Autoload...
+// Autoload très simple
 spl_autoload_register(function ($class) {
     $baseDir = dirname(__DIR__) . '/app/';
     $class = str_replace('\\', '/', $class);
@@ -27,10 +23,9 @@ spl_autoload_register(function ($class) {
     }
 });
 
-
-// Route très simple : ?controller=home&action=index
+// Routing basique
 $controllerName = isset($_GET['controller']) ? ucfirst(strtolower($_GET['controller'])) . 'Controller' : 'HomeController';
-$actionName     = isset($_GET['action']) ? $_GET['action'] : 'index';
+$actionName     = $_GET['action'] ?? 'index';
 
 if (!class_exists($controllerName)) {
     http_response_code(404);

@@ -1,15 +1,14 @@
 <?php
-// app/controllers/HomeController.php
-
 class HomeController
 {
     public function index()
     {
-        $pageTitle = "Sophrologie – Christel Cantois";
+        $pageTitle   = "Accueil – Christel Cantois, sophrologue à Morges";
+        $currentPage = 'home';
 
         $data = [
-            'heroTitle' => 'Retrouvez calme et équilibre grâce à la sophrologie',
-            'heroSubtitle' => 'Un accompagnement doux pour gérer le stress, les émotions et améliorer votre qualité de vie.',
+            'heroTitle'    => 'Un souffle pour vous apaiser, un espace pour vous retrouver',
+            'heroSubtitle' => 'Retrouvez calme, confiance et sérénité grâce à des séances de sophrologie adaptées à vos besoins.',
         ];
 
         require dirname(__DIR__) . '/views/home/index.php';

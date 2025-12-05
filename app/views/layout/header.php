@@ -1,8 +1,18 @@
 <?php
 // app/views/layout/header.php
-if (!isset($pageTitle)) {
-    $pageTitle = "Maeva Beauté";
+
+if (!defined('BASE_URL')) {
+    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
+    $baseUrl = rtrim(str_replace('/index.php', '', $scriptName), '/');
+    define('BASE_URL', $baseUrl);
 }
+
+// Si jamais aucun titre n’a été donné par un contrôleur
+if (!isset($pageTitle) || $pageTitle === '') {
+    $pageTitle = "Christel Cantois – Sophrologie";
+}
+
+$currentPage = $currentPage ?? '';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,17 +26,24 @@ if (!isset($pageTitle)) {
 <header class="site-header">
     <div class="container header-inner">
         <div class="logo">
-    <a href="<?= BASE_URL ?>/index.php?controller=home&action=index">
-        <img src="<?= BASE_URL ?>/assets/img/logo-maeva.png" alt="Maeva Sophrologie">
-    </a>
-    <span class="logo-text">Christel Sophrologie</span>
-</div>
-    <nav class="main-nav">
-        <a href="?controller=home&action=index" class="nav-link active">Accueil</a>
-        <a href="#" class="nav-link">Séances</a>
-        <a href="#" class="nav-link">À propos</a>
-        <a href="#" class="nav-link">Contact</a>
-    </nav>
+            <a href="<?= BASE_URL ?>/index.php?controller=home&action=index" class="logo-link">
+                <img src="<?= BASE_URL ?>/assets/img/logo-maeva.png" alt="Christel Cantois – Sophrologue" class="logo-img">
+                <span class="logo-text">CHRISTEL CANTOIS – SOPHROLOGUE</span>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <a href="<?= BASE_URL ?>/index.php?controller=home&action=index"
+               class="nav-link <?= $currentPage === 'home' ? 'active' : '' ?>">Accueil</a>
+
+            <a href="<?= BASE_URL ?>/index.php?controller=seances&action=index"
+                class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
+
+            <a href="<?= BASE_URL ?>/index.php?controller=apropos&action=index"
+               class="nav-link <?= $currentPage === 'apropos' ? 'active' : '' ?>">À propos</a>
+
+            <a href="<?= BASE_URL ?>/index.php?controller=contact&action=index"
+                class="nav-link <?= $currentPage === 'contact' ? 'active' : '' ?>">Contact</a>
+        </nav>
     </div>
 </header>
 <main class="site-main">

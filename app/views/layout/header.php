@@ -1,13 +1,13 @@
 <?php
 // app/views/layout/header.php
 
+// BASE_URL fiable (fonctionne avec rewrite)
 if (!defined('BASE_URL')) {
-    $scriptName = $_SERVER['SCRIPT_NAME'] ?? '';
-    $baseUrl = rtrim(str_replace('/index.php', '', $scriptName), '/');
+    $baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME'] ?? ''), '/\\');
     define('BASE_URL', $baseUrl);
 }
 
-// Si jamais aucun titre n’a été donné par un contrôleur
+// Titre par défaut si aucun contrôleur n'en donne
 if (!isset($pageTitle) || $pageTitle === '') {
     $pageTitle = "Christel Cantois – Sophrologie";
 }
@@ -26,23 +26,24 @@ $currentPage = $currentPage ?? '';
 <header class="site-header">
     <div class="container header-inner">
         <div class="logo">
-            <a href="<?= BASE_URL ?>/index.php?controller=home&action=index" class="logo-link">
+            <a href="<?= BASE_URL ?>/accueil" class="logo-link">
                 <img src="<?= BASE_URL ?>/assets/img/logo-maeva.png" alt="Christel Cantois – Sophrologue" class="logo-img">
                 <span class="logo-text">CHRISTEL CANTOIS – SOPHROLOGUE</span>
             </a>
         </div>
+
         <nav class="main-nav">
-            <a href="<?= BASE_URL ?>/index.php?controller=home&action=index"
+            <a href="<?= BASE_URL ?>/accueil"
                class="nav-link <?= $currentPage === 'home' ? 'active' : '' ?>">Accueil</a>
 
-            <a href="<?= BASE_URL ?>/index.php?controller=seances&action=index"
-                class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
+            <a href="<?= BASE_URL ?>/seances"
+               class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
 
-            <a href="<?= BASE_URL ?>/index.php?controller=apropos&action=index"
+            <a href="<?= BASE_URL ?>/a-propos"
                class="nav-link <?= $currentPage === 'apropos' ? 'active' : '' ?>">À propos</a>
 
-            <a href="<?= BASE_URL ?>/index.php?controller=contact&action=index"
-                class="nav-link <?= $currentPage === 'contact' ? 'active' : '' ?>">Contact</a>
+            <a href="<?= BASE_URL ?>/contact"
+               class="nav-link <?= $currentPage === 'contact' ? 'active' : '' ?>">Contact</a>
         </nav>
     </div>
 </header>

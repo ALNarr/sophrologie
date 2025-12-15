@@ -57,58 +57,57 @@ require dirname(__DIR__) . '/layout/header.php';
             <?php endif; ?>
 
             <form method="post" class="contact-form">
-                <div class="form-grid">
-                    <div class="form-field">
-                        <label for="name">Nom / Prénom *</label>
-                        <input type="text" id="name" name="name"
-                               value="<?= htmlspecialchars($old['name'], ENT_QUOTES, 'UTF-8') ?>">
-                        <?php if (!empty($errors['name'])) : ?>
-                            <p class="form-error"><?= htmlspecialchars($errors['name'], ENT_QUOTES, 'UTF-8') ?></p>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="email">E-mail *</label>
-                        <input type="email" id="email" name="email"
-                               value="<?= htmlspecialchars($old['email'], ENT_QUOTES, 'UTF-8') ?>">
-                        <?php if (!empty($errors['email'])) : ?>
-                            <p class="form-error"><?= htmlspecialchars($errors['email'], ENT_QUOTES, 'UTF-8') ?></p>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="form-field">
-                        <label for="phone">Téléphone</label>
-                        <input type="text" id="phone" name="phone"
-                               value="<?= htmlspecialchars($old['phone'], ENT_QUOTES, 'UTF-8') ?>">
-                    </div>
-
-                    <div class="form-field">
-                        <label for="subject">Objet de la demande</label>
-                        <input type="text" id="subject" name="subject"
-                               value="<?= htmlspecialchars($old['subject'], ENT_QUOTES, 'UTF-8') ?>">
-                    </div>
-                </div>
-
+            <div class="form-grid">
                 <div class="form-field">
-                    <label for="message">Votre message *</label>
-                    <textarea id="message" name="message" rows="6"><?= htmlspecialchars($old['message'], ENT_QUOTES, 'UTF-8') ?></textarea>
-                    <?php if (!empty($errors['message'])) : ?>
-                        <p class="form-error"><?= htmlspecialchars($errors['message'], ENT_QUOTES, 'UTF-8') ?></p>
+                    <label for="name">Nom / Prénom <span class="req">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom"
+                        value="<?= htmlspecialchars($old['name'], ENT_QUOTES, 'UTF-8') ?>">
+                    <?php if (!empty($errors['name'])) : ?>
+                        <p class="form-error"><?= htmlspecialchars($errors['name'], ENT_QUOTES, 'UTF-8') ?></p>
                     <?php endif; ?>
                 </div>
 
                 <div class="form-field">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="rgpd" required>
-                        <span>J’accepte que mes données soient utilisées pour traiter ma demande.</span>
-                    </label>
+                    <label for="email">E-mail <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.ch"
+                        value="<?= htmlspecialchars($old['email'], ENT_QUOTES, 'UTF-8') ?>">
+                    <?php if (!empty($errors['email'])) : ?>
+                        <p class="form-error"><?= htmlspecialchars($errors['email'], ENT_QUOTES, 'UTF-8') ?></p>
+                    <?php endif; ?>
                 </div>
 
+                <div class="form-field">
+                    <label for="phone">Téléphone</label>
+                    <input type="text" id="phone" name="phone" placeholder="+41 …"
+                        value="<?= htmlspecialchars($old['phone'], ENT_QUOTES, 'UTF-8') ?>">
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Objet</label>
+                    <input type="text" id="subject" name="subject" placeholder="Prise de rendez-vous, question…"
+                        value="<?= htmlspecialchars($old['subject'], ENT_QUOTES, 'UTF-8') ?>">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label for="message">Votre message <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="7"
+                        placeholder="Expliquez brièvement votre besoin (stress, sommeil, émotions, etc.)"><?= htmlspecialchars($old['message'], ENT_QUOTES, 'UTF-8') ?></textarea>
+                <?php if (!empty($errors['message'])) : ?>
+                    <p class="form-error"><?= htmlspecialchars($errors['message'], ENT_QUOTES, 'UTF-8') ?></p>
+                <?php endif; ?>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" name="rgpd" required>
+                <span>J’accepte que mes données soient utilisées pour traiter ma demande.</span>
+            </label>
+
+            <div class="form-actions">
                 <button type="submit" class="btn btn-primary">Envoyer le message</button>
-                <p class="contact-note">
-                    * Champs obligatoires
-                </p>
-            </form>
+                <p class="contact-note">* Champs obligatoires</p>
+            </div>
+        </form>
         </div>
     </div>
 </section>

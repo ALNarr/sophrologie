@@ -27,35 +27,52 @@ require dirname(__DIR__) . '/layout/header.php';
 </section>
 
 <section class="section">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Mon parcours</h2>
-            <p>
-                Après plusieurs années comme enseignante, mon propre vécu m’a rappelé l’importance d’écouter mes
-                besoins et de prendre soin de ce qui, en moi, demandait à être apaisé. Une période de vie
-                particulièrement intense m’a invitée à m’arrêter, à regarder ce qui se passait à l’intérieur et à
-                accepter que j’avais besoin de soutien.
-            </p>
-            <p>
-                Ce moment difficile s’est finalement révélé être une opportunité&nbsp;: celle de me rencontrer
-                vraiment, de me reconstruire et de découvrir que la guérison était possible. J’ai entrepris un
-                travail profond sur moi-même, avec l’envie d’être actrice de ma transformation et de disposer
-                d’outils concrets pour avancer.
-            </p>
-            <p>
-                Cette démarche intérieure m’a menée naturellement vers la sophrologie. J’ai expérimenté la méthode,
-                j’en ai constaté les effets au quotidien, et j’ai peu à peu senti naître le désir de la transmettre
-                à mon tour.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>De l’enseignement à l’accompagnement</h3>
-            <p>
-                Mon expérience d’enseignante m’a donné le goût de la pédagogie, de la relation et de l’accompagnement.
-                La sophrologie est venue prolonger cette vocation&nbsp;: offrir un espace où chacun peut apprendre à
-                mieux se connaître, à se respecter et à s’accueillir tel qu’il est, avec douceur.
-            </p>
-        </div>
+    <div class="container">
+        <h1>À propos / Qui suis-je ?</h1>
+
+        <p>
+            Après plusieurs années comme enseignante, mon propre parcours m’a fait prendre conscience
+            de l’importance d’écouter mes besoins et de prendre soin de moi. Mon vécu m’a, à un moment,
+            rappelé l’importance de m’arrêter et de prendre soin de ce qui demandait à être apaisé.
+            Paradoxalement, ce moment difficile s’est révélé être une opportunité : celle de me rencontrer
+            vraiment, de me reconstruire et de comprendre que la guérison était possible.
+        </p>
+
+        <p>
+            J’ai alors entrepris un travail profond sur moi-même. Je cherchais une approche qui me permette
+            d’être actrice de ma transformation, et qui m’offre des outils concrets pour avancer.
+            Cette démarche intérieure m’a menée naturellement vers la sophrologie — une méthode que j’ai
+            éprouvée, intégrée, et qui m’a aidée à développer force, résilience et alignement.
+        </p>
+
+        <p>
+            Animée par le désir de transmettre à mon tour, je me suis formée à l’Institut de Sophrologie
+            du Sud-Ouest (ISSO), à Toulouse, où j’ai obtenu mon diplôme privé de sophrologue.
+        </p>
+
+        <p>J’ai ensuite enrichi ma pratique à travers plusieurs spécialisations :</p>
+
+        <ul>
+            <li>écoute et communication (Approche Centrée sur la Personne – Carl Rogers)</li>
+            <li>accompagnement des enfants et adolescents</li>
+            <li>monde du travail</li>
+            <li>personnes âgées</li>
+            <li>gestion du stress et du stress post-traumatique</li>
+            <li>addictions</li>
+            <li>troubles du sommeil</li>
+            <li>douleurs</li>
+        </ul>
+
+        <p>
+            Aujourd’hui, j’exerce dans le canton de Vaud, dans un espace que je loue à Morges, et je propose :
+        </p>
+
+        <ul>
+            <li>séances individuelles sur rendez-vous</li>
+            <li>séances en ligne</li>
+            <li>séances de groupe</li>
+            <li>ateliers et interventions en entreprise</li>
+        </ul>
     </div>
 </section>
 

@@ -20,7 +20,8 @@ require dirname(__DIR__) . '/layout/header.php';
                 <a href="<?= BASE_URL ?>/index.php?controller=contact&action=index#form" class="btn btn-primary">
                     Prendre rendez-vous
                 </a>
-                <a href="#approche" class="btn btn-ghost">Découvrir la sophrologie</a>
+                <a href="<?= BASE_URL ?>/sophrologie" class="btn btn-ghost">Découvrir la sophrologie</a>
+
             </div>
         </div>
         <div class="hero-card">
@@ -70,41 +71,57 @@ require dirname(__DIR__) . '/layout/header.php';
 </section>
 
 <section class="section">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Ma philosophie d’accompagnement</h2>
-            <p>
-                Pour moi, la sophrologie est à la fois une méthode concrète et un chemin vers soi. Elle répond
-                aussi bien à des besoins immédiats – se détendre, apaiser une douleur, préparer un événement – qu’à
-                des objectifs plus profonds : améliorer sa qualité de vie, renforcer sa capacité d’adaptation,
-                développer sa confiance en soi et vivre en accord avec ses valeurs.
-            </p>
-            <p>
-                Mon approche est bienveillante, intuitive et sensible, ancrée et congruente. Elle est neutre,
-                sans jugement ni interprétation, et s’appuie sur l’écoute active et la qualité de la relation.
-                Chaque séance est adaptée à votre rythme, à votre histoire et à ce que vous traversez.
-            </p>
-            <p>
-                Je souhaite que chacun se sente compris, accueilli, en sécurité et en confiance – que l’espace de
-                séance soit comme une respiration, un refuge intérieur où tout peut être déposé avec douceur.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>Sophrologue à Morges et en ligne</h3>
-            <p>
-                Je propose des séances individuelles sur rendez-vous dans un espace que je loue à Morges,
-                ainsi que des séances en ligne pour les personnes qui ne peuvent pas se déplacer.
-            </p>
-            <p>
-                J’anime également des séances de groupe, des ateliers et des interventions en entreprise autour de la
-                gestion du stress, du bien-être au travail et de la prévention du burn-out.
-            </p>
-            <p>
-                Je suis membre de l’ASSP, ce qui garantit le respect d’un cadre professionnel et éthique rigoureux.
-            </p>
+    <div class="container">
+        <h1>Bienvenue</h1>
+
+        <p>
+            La vie peut parfois être stressante, fatigante ou confuse. Entre obligations professionnelles,
+            personnelles et émotions intenses, il est facile de perdre le contact avec soi-même.
+            La sophrologie est une méthode douce et accessible qui vous aide à retrouver calme, confiance
+            et bien-être, au quotidien et dans les moments importants de votre vie.
+        </p>
+
+        <h2>🌱 Mon approche</h2>
+
+        <p>
+            Chaque personne est unique. Mon accompagnement est bienveillant, intuitif et adapté à vos besoins.
+            Que ce soit pour apaiser le stress, améliorer le sommeil, préparer un examen ou un entretien,
+            ou pour développer votre confiance et mieux vous connaître, je vous propose des outils simples
+            à utiliser au quotidien.
+        </p>
+
+        <p>
+            Les séances sont des moments privilégiés pour vous reconnecter à vos ressources, à votre corps
+            et à vos émotions, dans un cadre sécurisant et respectueux.
+        </p>
+
+        <h2>✨ Mes services principaux</h2>
+
+        <ul>
+            <li>Séances individuelles – sur rendez-vous au cabinet ou en ligne</li>
+            <li>Séances de groupe et ateliers – pour expérimenter la sophrologie dans un cadre convivial</li>
+            <li>Interventions en entreprise – gestion du stress, bien-être au travail et prévention du burn-out</li>
+        </ul>
+
+        <p>
+            Chaque accompagnement est personnalisé, progressif et centré sur vos besoins.
+        </p>
+
+        <h2>🤝 Commencer votre parcours</h2>
+
+        <p>
+            Faire le premier pas vers le mieux-être peut sembler difficile, mais il est souvent le plus libérateur.
+            Je vous invite à prendre rendez-vous ou à me contacter pour échanger sur vos besoins et découvrir
+            comment la sophrologie peut vous accompagner.
+        </p>
+
+        <div class="hero-actions">
+            <a href="<?= BASE_URL ?>/contact#form" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="<?= BASE_URL ?>/contact#form" class="btn btn-ghost">Me contacter</a>
         </div>
     </div>
 </section>
+
 
 <section class="section section-soft">
     <div class="container">

@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /Sophro/sophrologie/public/
+
+# Si fichier ou dossier existe, on ne touche pas
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Tout le reste -> index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

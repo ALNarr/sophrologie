@@ -36,6 +36,10 @@ $currentPage = $currentPage ?? '';
             <a href="<?= BASE_URL ?>/accueil"
                class="nav-link <?= $currentPage === 'home' ? 'active' : '' ?>">Accueil</a>
 
+               <a href="<?= BASE_URL ?>/sophrologie"
+   class="nav-link <?= $currentPage === 'sophrologie' ? 'active' : '' ?>">Sophrologie</a>
+
+
             <a href="<?= BASE_URL ?>/seances"
                class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
 

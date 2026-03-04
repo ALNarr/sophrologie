@@ -23,32 +23,22 @@ $currentPage = $currentPage ?? '';
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
-    <div class="container header-inner">
-        <div class="logo">
-            <a href="<?= BASE_URL ?>/accueil" class="logo-link">
-                <img src="<?= BASE_URL ?>/assets/img/logo-maeva.png" alt="Christel Cantois – Sophrologue" class="logo-img">
-                <span class="logo-text">CHRISTEL CANTOIS – SOPHROLOGUE</span>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="<?= BASE_URL ?>/accueil" class="logo">
+                <img src="<?= BASE_URL ?>/assets/img/logo-maeva.png" alt="Logo">
+                <span>Christel Cantois – Sophrologue</span>
             </a>
+            
+            <nav class="main-nav">
+                <a href="<?= BASE_URL ?>/accueil" class="nav-link <?= $currentPage === 'home' ? 'active' : '' ?>">Accueil</a>
+                <a href="<?= BASE_URL ?>/sophrologie" class="nav-link <?= $currentPage === 'sophrologie' ? 'active' : '' ?>">Sophrologie</a>
+                <a href="<?= BASE_URL ?>/seances" class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
+                <a href="<?= BASE_URL ?>/a-propos" class="nav-link <?= $currentPage === 'apropos' ? 'active' : '' ?>">À propos</a>
+                <a href="<?= BASE_URL ?>/contact" class="nav-link <?= $currentPage === 'contact' ? 'active' : '' ?>">Contact</a>
+            </nav>
+
+            <a href="<?= BASE_URL ?>/contact" class="btn btn-primary">Prendre RDV</a>
         </div>
-
-        <nav class="main-nav">
-            <a href="<?= BASE_URL ?>/accueil"
-               class="nav-link <?= $currentPage === 'home' ? 'active' : '' ?>">Accueil</a>
-
-               <a href="<?= BASE_URL ?>/sophrologie"
-   class="nav-link <?= $currentPage === 'sophrologie' ? 'active' : '' ?>">Sophrologie</a>
-
-
-            <a href="<?= BASE_URL ?>/seances"
-               class="nav-link <?= $currentPage === 'seances' ? 'active' : '' ?>">Séances</a>
-
-            <a href="<?= BASE_URL ?>/a-propos"
-               class="nav-link <?= $currentPage === 'apropos' ? 'active' : '' ?>">À propos</a>
-
-            <a href="<?= BASE_URL ?>/contact"
-               class="nav-link <?= $currentPage === 'contact' ? 'active' : '' ?>">Contact</a>
-        </nav>
-    </div>
-</header>
-<main class="site-main">
+    </header>
+    <main>

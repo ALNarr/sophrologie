@@ -1,12 +1,16 @@
 <?php
+// public/index.php
+
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// Calcul de BASE_URL
-$baseUrl = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+// URL de base (jusqu'au dossier public)
+$baseUrl = rtrim(str_replace('/index.php', '', $_SERVER['SCRIPT_NAME']), '/');
+
+// On rend dispo partout
 define('BASE_URL', $baseUrl);
 
-// Autoload très simple
+// Autoload...
 spl_autoload_register(function ($class) {
     $baseDir = dirname(__DIR__) . '/app/';
     $class = str_replace('\\', '/', $class);
@@ -23,37 +27,46 @@ spl_autoload_register(function ($class) {
     }
 });
 
-// Routing via URL propre
-if (!empty($_GET['url'])) {
 
+// =========================================================================
+// LE ROUTEUR (C'est ici que l'URL est analysée)
+// =========================================================================
+
+if (!empty($_GET['url'])) {
+    
+    // Notre dictionnaire de routes (URL tapée -> [Nom du Controller, Action])
     $routes = [
-        ''         => ['HomeController', 'index'],
-        'accueil'  => ['HomeController', 'index'],
-        'seances'  => ['SeancesController', 'index'],
-        'a-propos' => ['AproposController', 'index'],
-        'contact'  => ['ContactController', 'index'],
+        ''            => ['HomeController', 'index'],
+        'accueil'     => ['HomeController', 'index'],
+        'seances'     => ['SeancesController', 'index'],
+        'a-propos'    => ['AproposController', 'index'],
+        'contact'     => ['ContactController', 'index'],
         'sophrologie' => ['SophrologieController', 'index'],
     ];
 
     $url = trim($_GET['url'], '/');
 
+    // On regarde si l'URL demandée existe dans notre dictionnaire
     if (isset($routes[$url])) {
-        [$controllerName, $actionName] = $routes[$url];
+        $controllerName = $routes[$url][0];
+        $actionName     = $routes[$url][1];
     } else {
         http_response_code(404);
-        echo "Page introuvable.";
+        echo "Erreur 404 : La page '$url' est introuvable.";
         exit;
     }
 
 } else {
-    // URL racine /
+    // URL racine (aucun paramètre) -> On charge l'accueil
     $controllerName = 'HomeController';
     $actionName     = 'index';
 }
 
+// =========================================================================
+
 if (!class_exists($controllerName)) {
     http_response_code(404);
-    echo "Controller introuvable.";
+    echo "Erreur 404 : Le Controller '$controllerName' est introuvable.";
     exit;
 }
 
@@ -61,7 +74,7 @@ $controller = new $controllerName();
 
 if (!method_exists($controller, $actionName)) {
     http_response_code(404);
-    echo "Action introuvable.";
+    echo "Erreur 404 : L'action '$actionName' est introuvable.";
     exit;
 }
 

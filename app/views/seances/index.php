@@ -3,215 +3,175 @@
 require dirname(__DIR__) . '/layout/header.php';
 ?>
 
-<section class="hero">
-    <div class="container hero-inner">
-        <div class="hero-text">
-            <h1>Séances de sophrologie</h1>
-            <p class="hero-subtitle">
-                Des accompagnements sur mesure, en individuel, en groupe ou en entreprise, pour traverser le stress,
-                les changements de vie et les périodes de questionnement avec plus de sérénité.
+<!-- ==========================================
+     HERO SECTION (Séances)
+     ========================================== -->
+<section class="section" style="padding-bottom: 2rem;">
+    <div class="container" style="max-width: 900px; margin: 0 auto 0 0;">
+        <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; letter-spacing: -0.02em;">Séances de sophrologie</h1>
+        
+        <p style="font-size: 1.2rem; color: var(--color-text-body); margin-bottom: 2rem; line-height: 1.6;">
+            Des accompagnements sur mesure pour traverser le stress et les changements de vie avec plus de sérénité.
+        </p>
+        
+        <p style="font-size: 1.05rem; color: var(--color-text-body); margin-bottom: 3rem; line-height: 1.8;">
+            Les séances sont des moments privilégiés pour vous reconnecter à vos ressources, à votre corps et à vos émotions. Elles peuvent se vivre au cabinet à Morges ou en ligne.
+        </p>
+    </div>
+
+    <div class="container">
+        <!-- Carte encadrée "Un accompagnement progressif" -->
+        <div style="background: var(--color-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 3rem; box-shadow: var(--shadow-sm); margin-bottom: 3rem;">
+            <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">Un accompagnement progressif</h2>
+            <p style="font-size: 1.05rem; margin: 0; color: var(--color-text-body);">
+                Chaque accompagnement est <strong>personnalisé</strong> et centré sur vos besoins : santé, émotions, confiance en soi, préparation aux examens, transitions de vie.
             </p>
-            <p class="hero-desc">
-                Les séances sont des moments privilégiés pour vous reconnecter à vos ressources, à votre corps et à vos
-                émotions, dans un cadre sécurisant et respectueux. Elles peuvent se vivre au cabinet à Morges ou en
-                ligne, selon vos besoins et vos possibilités.
-            </p>
-            <div class="hero-actions">
-                <a href="<?= BASE_URL ?>/index.php?controller=contact&action=index#form" class="btn btn-primary">
-                    Prendre rendez-vous
-                </a>
-                <a href="#types-de-seances" class="btn btn-ghost">
-                    Découvrir les types de séances
-                </a>
+        </div>
+
+        <!-- Boutons d'action -->
+        <div class="hero-actions">
+            <a href="<?= BASE_URL ?>/contact" class="btn btn-primary">Prendre rendez-vous</a>
+            <a href="#types-seances" class="btn btn-outline">Découvrir les types de séances</a>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     DÉTAIL DES SÉANCES
+     ========================================== -->
+<section class="section" id="types-seances">
+    <div class="container">
+
+        <!-- 1. SÉANCES INDIVIDUELLES -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: start; margin-bottom: 6rem;">
+            <!-- Colonne texte -->
+            <div>
+                <div class="icon-circle-filled" style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: var(--color-primary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Séances individuelles</h2>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin-bottom: 1.5rem; line-height: 1.7;">
+                    Les séances individuelles sont un espace privilégié pour prendre le temps de vous poser, de déposer ce que vous vivez et d'explorer en douceur ce qui a besoin d'attention. Elles permettent de travailler sur une problématique précise ou sur un besoin global de mieux-être.
+                </p>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin: 0; line-height: 1.7;">
+                    Entre séances de respiration, de détente corporelle et de visualisation, vous êtes invité(e) à vous reconnecter à votre corps, à vos ressentis et à vos ressources intérieures.
+                </p>
+            </div>
+            
+            <!-- Colonne "En pratique" -->
+            <div class="card" style="text-align: left; padding: 3rem;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 2rem;">En pratique</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Lieu : au cabinet à Morges ou en ligne</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect width="15" height="14" x="1" y="5" rx="2" ry="2"/></svg>
+                        <span>Format : accompagnement individuel sur rendez-vous</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Publics : adultes, adolescents, enfants</span>
+                    </li>
+                </ul>
+                <div style="border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
+                    <p style="font-size: 0.9rem; color: var(--color-muted); margin: 0;">Les informations sur les tarifs seront précisées lors de la prise de contact.</p>
+                </div>
             </div>
         </div>
-        <div class="hero-card">
-            <h2>Un accompagnement progressif</h2>
-            <p>
-                Chaque accompagnement est personnalisé, progressif et centré sur vos besoins&nbsp;: gestion du stress,
-                sommeil, émotions, confiance en soi, préparation à un examen ou à un entretien, périodes de transition,
-                questionnements personnels ou professionnels.
-            </p>
+
+        <!-- 2. SÉANCES DE GROUPE -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: start; margin-bottom: 6rem;">
+            <!-- Colonne texte -->
+            <div>
+                <div class="icon-circle-filled" style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: var(--color-primary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Séances de groupe & ateliers</h2>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin-bottom: 1.5rem; line-height: 1.7;">
+                    Les séances de groupe permettent de découvrir la sophrologie dans un cadre convivial, en partageant un moment avec d'autres personnes tout en respectant l'intimité de chacun. Le travail se fait autour de thématiques spécifiques : gestion du stress, sommeil, émotions.
+                </p>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin: 0; line-height: 1.7;">
+                    L'atelier collectif est un temps de ressourcement, de détente et de partage. Vous bénéficiez de la dynamique du groupe, tout en avançant à votre propre rythme.
+                </p>
+            </div>
+            
+            <!-- Colonne "En pratique" -->
+            <div class="card" style="text-align: left; padding: 3rem;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 2rem;">En pratique</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>Séances en petit nombre</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+                        <span>Ateliers ponctuels ou cycles de plusieurs séances</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        <span>Thématiques variées selon les besoins</span>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+        <!-- 3. INTERVENTIONS ENTREPRISE -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 4rem; align-items: start; margin-bottom: 4rem;">
+            <!-- Colonne texte -->
+            <div>
+                <div class="icon-circle-filled" style="width: 56px; height: 56px; margin: 0 0 1.5rem 0; background: var(--color-primary);">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                </div>
+                <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Interventions en entreprise</h2>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin-bottom: 1.5rem; line-height: 1.7;">
+                    J'interviens auprès des entreprises, associations et structures pour proposer des ateliers de sophrologie sur mesure : gestion du stress, cohésion d'équipe, prévention des risques psychosociaux, qualité de vie au travail.
+                </p>
+                <p style="font-size: 1.05rem; color: var(--color-text-body); margin: 0; line-height: 1.7;">
+                    Ces interventions peuvent prendre la forme d'ateliers ponctuels, de cycles réguliers ou d'accompagnement individuel des collaborateurs.
+                </p>
+            </div>
+            
+            <!-- Colonne "En pratique" -->
+            <div class="card" style="text-align: left; padding: 3rem;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 2rem;">En pratique</h3>
+                <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0;">
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Sur site ou en ligne, selon vos besoins</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        <span>Programmes adaptés à vos objectifs</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.2rem; font-size: 1.05rem;">
+                        <svg width="20" height="20" style="color: var(--color-primary); margin-top: 0.2rem; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>Accompagnement des équipes et des dirigeants</span>
+                    </li>
+                </ul>
+                <a href="<?= BASE_URL ?>/contact" class="btn btn-outline btn-full">Demander un devis</a>
+            </div>
+        </div>
+
     </div>
 </section>
 
-<section class="section section-soft" id="types-de-seances">
+<!-- ==========================================
+     CTA FINAL (Questions)
+     ========================================== -->
+<section class="section" style="padding-top: 0;">
     <div class="container">
-        <h2 class="section-title">Mes types de séances</h2>
-        <p class="section-intro">
-            La sophrologie peut se vivre de différentes façons, selon ce que vous traversez et ce qui vous convient le mieux.
-        </p>
-
-        <div class="cards-grid">
-            <article class="card">
-                <h3>Séances individuelles</h3>
-                <p>
-                    Un temps pour vous, en tête-à-tête, pour explorer ce que vous vivez, mettre des mots sur vos
-                    ressentis et expérimenter des pratiques adaptées à votre situation.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Séances de groupe & ateliers</h3>
-                <p>
-                    Découvrir la sophrologie dans un cadre convivial, autour de thématiques comme le stress, le
-                    sommeil, les émotions ou la confiance en soi.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Séances en ligne</h3>
-                <p>
-                    Bénéficier d’un accompagnement à distance, depuis chez vous, tout en conservant la qualité de
-                    présence, d’écoute et de relation.
-                </p>
-            </article>
-            <article class="card">
-                <h3>Interventions en entreprise</h3>
-                <p>
-                    Programmes et ateliers sur mesure autour du bien-être au travail, de la gestion du stress et de la
-                    prévention du burn-out.
-                </p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Séances individuelles</h2>
-            <p>
-                Les séances individuelles sont un espace privilégié pour prendre le temps de vous poser, de déposer ce
-                que vous vivez et d’explorer en douceur ce qui a besoin d’attention. Elles permettent de travailler
-                sur une problématique précise (stress, sommeil, douleurs, émotions, transitions de vie, confiance en
-                soi, etc.) ou sur un besoin plus global d’équilibre et de mieux-être.
+        <div style="background: var(--color-bg); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 4rem 2rem; text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem;">Une question ? Besoin d'échanger ?</h2>
+            <p style="font-size: 1.05rem; color: var(--color-text-body); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                N'hésitez pas à me contacter pour discuter de vos besoins. Je serai ravie de vous accompagner dans votre démarche.
             </p>
-            <p>
-                Grâce à des exercices de respiration, de détente corporelle et de visualisation, vous êtes invité·e à
-                vous reconnecter à votre corps, à vos ressentis et à vos ressources intérieures. L’objectif est que
-                vous puissiez progressivement vous approprier ces outils pour les utiliser de manière autonome dans
-                votre quotidien.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>En pratique</h3>
-            <p>
-                • Lieu&nbsp;: au cabinet à Morges ou en ligne<br>
-                • Format&nbsp;: accompagnement individuel, sur rendez-vous<br>
-                • Public&nbsp;: adultes, adolescents, enfants (contenu adapté à l’âge)
-            </p>
-            <p>
-                La durée et le nombre de séances sont adaptés à votre situation. L’accompagnement se construit ensemble,
-                au fil des rencontres.
-            </p>
-            <p>
-                <em>Les informations sur les tarifs seront précisées ici.</em>
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-soft">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Séances de groupe & ateliers</h2>
-            <p>
-                Les séances de groupe et les ateliers permettent de découvrir la sophrologie dans un cadre convivial,
-                en partageant un moment avec d’autres personnes tout en respectant l’intimité de chacun. Le travail se
-                fait autour de thématiques spécifiques&nbsp;: gestion du stress, sommeil, émotions, confiance en soi,
-                équilibre au quotidien…
-            </p>
-            <p>
-                Les pratiques proposées sont simples, accessibles et facilement réutilisables chez soi. Le groupe peut
-                devenir un soutien, un lieu de partage et de motivation pour intégrer la sophrologie dans la vie de
-                tous les jours.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>En pratique</h3>
-            <p>
-                • Séances de groupe en petit nombre<br>
-                • Ateliers ponctuels ou cycles de plusieurs séances<br>
-                • Thèmes définis à l’avance ou élaborés avec les participants / structures
-            </p>
-            <p>
-                Ces formats peuvent être proposés en cabinet, en institution ou en entreprise.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="section">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Séances en ligne</h2>
-            <p>
-                Pour les personnes qui ne peuvent pas se déplacer ou qui préfèrent rester chez elles, les séances en
-                ligne offrent une alternative souple et confortable. Elles se déroulent de la même manière qu’une
-                séance en présentiel, via une plateforme de visioconférence simple d’utilisation.
-            </p>
-            <p>
-                Vous avez simplement besoin d’un endroit calme, d’une connexion internet stable et, idéalement, d’un
-                siège ou d’un fauteuil dans lequel vous êtes à l’aise.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>En pratique</h3>
-            <p>
-                • Séances individuelles à distance<br>
-                • Même qualité d’écoute et de présence qu’en cabinet<br>
-                • Possibilité de combiner présentiel et en ligne selon vos besoins
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="section section-soft">
-    <div class="container about-grid">
-        <div>
-            <h2 class="section-title">Interventions en entreprise</h2>
-            <p>
-                La sophrologie est un outil précieux pour le monde du travail&nbsp;: elle contribue à la gestion du
-                stress, à la prévention des risques psychosociaux et du burn-out, et à l’amélioration de la qualité de
-                vie au travail.
-            </p>
-            <p>
-                Les interventions sont construites sur mesure, en fonction des besoins de l’entreprise ou de
-                l’institution&nbsp;: ateliers thématiques, cycles de séances, temps de ressourcement, accompagnement
-                des équipes lors de périodes de changement, etc.
-            </p>
-        </div>
-        <div class="about-highlight">
-            <h3>En pratique</h3>
-            <p>
-                • Ateliers et programmes sur mesure<br>
-                • Thèmes&nbsp;: stress, récupération, régulation émotionnelle, équilibre vie pro / vie perso, etc.<br>
-                • Intervention possible en présentiel ou en ligne
-            </p>
-            <p>
-                <em>Pour un devis ou une proposition adaptée à votre structure, n’hésitez pas à me contacter.</em>
-            </p>
-        </div>
-    </div>
-</section>
-
-<section class="section" id="contact-seances">
-    <div class="container">
-        <h2 class="section-title">Envie de commencer un accompagnement&nbsp;?</h2>
-        <p class="section-intro">
-            Si vous souhaitez en savoir plus, poser une question ou prendre rendez-vous, je vous invite à me contacter.
-            Nous pourrons échanger sur vos besoins et voir ensemble quel type de séance vous conviendrait le mieux.
-        </p>
-        <div class="hero-actions">
-            <a href="<?= BASE_URL ?>/index.php?controller=contact&action=index#form" class="btn btn-primary">
-                Prendre rendez-vous
-            </a>
-            <a href="<?= BASE_URL ?>/index.php?controller=home&action=index#contact" class="btn btn-ghost">
-                Me contacter
-            </a>
+            <a href="<?= BASE_URL ?>/contact" class="btn btn-primary">Me contacter</a>
         </div>
     </div>
 </section>
 
 <?php
 require dirname(__DIR__) . '/layout/footer.php';
+?>

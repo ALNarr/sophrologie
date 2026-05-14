@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,11 @@
     <div class="container header-inner">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="Christel Cantois – Sophrologue & Hypnose SAJECE" class="logo-img">
+                <img src="img/logo.png" alt="Christel Cantois" class="logo-img">
+                <span class="logo-text-block">
+                    <span class="logo-name">Christel Cantois</span>
+                    <span class="logo-tagline">Sophrologie &amp; Hypnose SAJECE</span>
+                </span>
             </a>
         </div>
         <nav class="main-nav">
@@ -24,6 +28,11 @@
             <a href="a-propos.html" class="nav-link">À propos</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
     </div>
 </header>
@@ -54,7 +63,7 @@
                     Selon vos besoins, nous utiliserons la sophrologie, l'hypnose SAJECE ou des outils de coaching Ikigai pour vous accompagner vers plus d'équilibre et de clarté.
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85;">
-                    [À compléter avec vos informations spécifiques : durée des séances, déroulement, ce à quoi s'attendre, etc.]
+                    Chaque séance dure environ 60 minutes. Nous commençons par un temps d'échange pour cerner vos besoins du moment, suivi d'une pratique guidée — respiration, détente corporelle, visualisation ou hypnose selon ce qui est pertinent pour vous. Vous repartez avec des outils concrets à réutiliser seul·e au quotidien.
                 </p>
             </div>
             <div class="highlight-box">
@@ -78,7 +87,7 @@
                     Les ateliers de groupe permettent d'expérimenter la sophrologie dans un cadre convivial et sécurisant, autour de thématiques communes : gestion du stress, sommeil, émotions, confiance en soi…
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85;">
-                    [À compléter — fréquence, thèmes abordés, format des ateliers, taille des groupes, etc.]
+                    Les ateliers se déroulent en petits groupes de 6 à 10 personnes maximum, dans une ambiance bienveillante et sans jugement. Chacun·e avance à son propre rythme tout en bénéficiant de la dynamique collective. Les cycles se déroulent généralement sur 4 à 6 séances pour permettre un travail progressif et ancré dans la durée.
                 </p>
             </div>
             <div class="highlight-box">
@@ -126,7 +135,7 @@
                     La sophrologie est un outil précieux pour le monde du travail : gestion du stress, prévention du burn-out, amélioration de la qualité de vie au travail. Les interventions sont construites sur mesure selon vos besoins.
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85;">
-                    [À compléter — type d'interventions proposées, format, durée, pour quel type d'équipes ou d'entreprises, etc.]
+                    Qu'il s'agisse d'une sensibilisation ponctuelle, d'un programme de plusieurs semaines ou d'ateliers réguliers, chaque intervention est construite selon vos contraintes et la réalité de vos équipes. Ces actions s'adressent aussi bien aux collaborateurs qu'aux équipes managériales souhaitant développer leur capital bien-être.
                 </p>
             </div>
             <div class="highlight-box">
@@ -188,5 +197,24 @@
     </div>
 </footer>
 
+<script>
+(function(){
+    var toggle = document.getElementById("navToggle");
+    var nav = document.querySelector(".main-nav");
+    if (!toggle || !nav) return;
+    toggle.addEventListener("click", function(){
+        nav.classList.toggle("open");
+        toggle.classList.toggle("open");
+        document.body.classList.toggle("nav-open");
+    });
+    nav.querySelectorAll(".nav-link").forEach(function(link){
+        link.addEventListener("click", function(){
+            nav.classList.remove("open");
+            toggle.classList.remove("open");
+            document.body.classList.remove("nav-open");
+        });
+    });
+})();
+</script>
 </body>
 </html>

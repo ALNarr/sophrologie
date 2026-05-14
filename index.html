@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,11 @@
     <div class="container header-inner">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="Christel Cantois – Sophrologue & Hypnose SAJECE" class="logo-img">
+                <img src="img/logo.png" alt="Christel Cantois" class="logo-img">
+                <span class="logo-text-block">
+                    <span class="logo-name">Christel Cantois</span>
+                    <span class="logo-tagline">Sophrologie &amp; Hypnose SAJECE</span>
+                </span>
             </a>
         </div>
         <nav class="main-nav">
@@ -24,6 +28,11 @@
             <a href="a-propos.html" class="nav-link">À propos</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
     </div>
 </header>
@@ -106,9 +115,9 @@
     <section class="section section-white">
         <div class="container two-col asymmetric">
             <div>
-                <span class="eyebrow">Mon approche</span>
+                <span class="eyebrow-rose">Mon approche</span>
                 <h2 class="section-title">Une présence douce et engagée</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider rose"></div>
                 <p style="color: var(--color-text-body); line-height: 1.8; margin-bottom: 1rem;">
                     Mon approche repose avant tout sur l'écoute, la douceur et le respect du rythme de chacun.
                 </p>
@@ -121,7 +130,7 @@
                 <a href="mon-approche.html" class="btn btn-primary">En savoir plus sur mon approche</a>
             </div>
             <div>
-                <img src="img/hero.jpg" alt="Approche douce et bienveillante" class="approach-img">
+                <img src="img/bckg_champ.jpg" alt="Approche douce et bienveillante" class="approach-img">
             </div>
         </div>
     </section>
@@ -181,5 +190,24 @@
     </div>
 </footer>
 
+<script>
+(function(){
+    var toggle = document.getElementById("navToggle");
+    var nav = document.querySelector(".main-nav");
+    if (!toggle || !nav) return;
+    toggle.addEventListener("click", function(){
+        nav.classList.toggle("open");
+        toggle.classList.toggle("open");
+        document.body.classList.toggle("nav-open");
+    });
+    nav.querySelectorAll(".nav-link").forEach(function(link){
+        link.addEventListener("click", function(){
+            nav.classList.remove("open");
+            toggle.classList.remove("open");
+            document.body.classList.remove("nav-open");
+        });
+    });
+})();
+</script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,11 @@
     <div class="container header-inner">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="Christel Cantois – Sophrologue & Hypnose SAJECE" class="logo-img">
+                <img src="img/logo.png" alt="Christel Cantois" class="logo-img">
+                <span class="logo-text-block">
+                    <span class="logo-name">Christel Cantois</span>
+                    <span class="logo-tagline">Sophrologie &amp; Hypnose SAJECE</span>
+                </span>
             </a>
         </div>
         <nav class="main-nav">
@@ -24,6 +28,11 @@
             <a href="a-propos.html" class="nav-link active">À propos</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
     </div>
 </header>
@@ -44,9 +53,9 @@
     <section class="section section-white">
         <div class="container two-col">
             <div>
-                <span class="eyebrow">Mon parcours</span>
+                <span class="eyebrow-rose">Mon parcours</span>
                 <h2 class="section-title">Un chemin vers l'accompagnement</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider rose"></div>
                 <p style="color: var(--color-text-body); line-height: 1.85; margin-bottom: 1rem;">
                     Après plusieurs années comme enseignante, mon propre parcours m'a fait prendre conscience de l'importance d'écouter mes besoins. Ce moment difficile s'est révélé être une opportunité : celle de me rencontrer vraiment et de comprendre que la guérison était possible.
                 </p>
@@ -54,12 +63,21 @@
                     J'ai entrepris un travail profond sur moi-même et me suis tournée vers la sophrologie — une méthode qui m'a aidée à développer force, résilience et alignement. Je me suis formée à l'Institut de Sophrologie du Sud-Ouest (ISSO) à Toulouse.
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85;">
-                    [À compléter — vos formations en hypnose SAJECE et coaching Ikigai, le fil rouge de votre parcours, ce qui vous a amené à intégrer ces approches complémentaires.]
+                    C'est naturellement que j'ai ensuite élargi ma pratique à l'hypnose SAJECE, une approche que j'ai découverte pour son respect profond de la personne et son efficacité sur des problématiques variées. Le coaching Ikigai est venu compléter cet ensemble en m'offrant un outil puissant pour accompagner ceux qui cherchent un sens nouveau, une direction, ou simplement à se retrouver.
                 </p>
             </div>
-            <div style="display: flex; justify-content: center; align-items: flex-start; padding-top: 1rem;">
-                <div class="photo-circle">
-                    <span>Photo de Christel<br><em>(à ajouter)</em></span>
+            <div class="photo-wrapper">
+                <div class="photo-frame">
+                    <!-- Remplacer le bloc ci-dessous par une vraie photo :
+                         <img src="img/christel.jpg" alt="Christel Cantois"> -->
+                    <div class="photo-placeholder">
+                        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                        <span>Photo de Christel</span>
+                    </div>
+                </div>
+                <div class="photo-caption">
+                    <p class="photo-name">Christel Cantois</p>
+                    <p class="photo-title">Sophrologue &amp; praticienne en hypnose SAJECE</p>
                 </div>
             </div>
         </div>
@@ -87,14 +105,14 @@
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v6a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
                     </div>
                     <h3>Hypnose SAJECE</h3>
-                    <p>[À compléter — organisme de formation, niveau obtenu, spécificités de cette approche de l'hypnose.]</p>
+                    <p>Formation à l'hypnose thérapeutique selon l'approche SAJECE — une méthode humaniste et bienveillante qui place la personne au cœur du processus, en respectant pleinement son intégrité et son rythme.</p>
                 </article>
                 <article class="card">
                     <div class="card-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
                     </div>
                     <h3>Coaching Ikigai</h3>
-                    <p>[À compléter — formation Ikigai, ce que cela apporte dans votre pratique, lien avec votre vision de l'accompagnement.]</p>
+                    <p>Formation au coaching Ikigai — une approche inspirée du concept japonais de la « raison d'être », utilisée pour accompagner les transitions de vie, la recherche de sens et l'alignement entre valeurs profondes et quotidien.</p>
                 </article>
             </div>
         </div>
@@ -186,5 +204,24 @@
     </div>
 </footer>
 
+<script>
+(function(){
+    var toggle = document.getElementById("navToggle");
+    var nav = document.querySelector(".main-nav");
+    if (!toggle || !nav) return;
+    toggle.addEventListener("click", function(){
+        nav.classList.toggle("open");
+        toggle.classList.toggle("open");
+        document.body.classList.toggle("nav-open");
+    });
+    nav.querySelectorAll(".nav-link").forEach(function(link){
+        link.addEventListener("click", function(){
+            nav.classList.remove("open");
+            toggle.classList.remove("open");
+            document.body.classList.remove("nav-open");
+        });
+    });
+})();
+</script>
 </body>
 </html>

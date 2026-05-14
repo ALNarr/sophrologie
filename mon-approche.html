@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,11 @@
     <div class="container header-inner">
         <div class="logo">
             <a href="index.html" class="logo-link">
-                <img src="img/logo.png" alt="Christel Cantois – Sophrologue & Hypnose SAJECE" class="logo-img">
+                <img src="img/logo.png" alt="Christel Cantois" class="logo-img">
+                <span class="logo-text-block">
+                    <span class="logo-name">Christel Cantois</span>
+                    <span class="logo-tagline">Sophrologie &amp; Hypnose SAJECE</span>
+                </span>
             </a>
         </div>
         <nav class="main-nav">
@@ -24,6 +28,11 @@
             <a href="a-propos.html" class="nav-link">À propos</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <a href="contact.html" class="btn btn-primary">Prendre RDV</a>
     </div>
 </header>
@@ -44,21 +53,21 @@
     <section class="section section-white">
         <div class="container two-col">
             <div>
-                <span class="eyebrow">Ma philosophie</span>
+                <span class="eyebrow-rose">Ma philosophie</span>
                 <h2 class="section-title">Une présence avant tout</h2>
-                <div class="section-divider"></div>
+                <div class="section-divider rose"></div>
                 <p style="color: var(--color-text-body); line-height: 1.85; margin-bottom: 1rem;">
-                    [Texte à compléter — votre présentation de votre philosophie d'accompagnement : ce qui vous guide, vos valeurs, votre posture d'écoute.]
+                    Mon accompagnement est avant tout une invitation à ralentir. Je crois profondément que chaque personne porte en elle les ressources nécessaires pour traverser les épreuves et retrouver son équilibre. Mon rôle n'est pas de guérir à votre place, mais de créer l'espace et les conditions pour que vous puissiez vous reconnecter à ces ressources.
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85; margin-bottom: 1rem;">
-                    [Deuxième paragraphe — ex : importance de la relation de confiance, du rythme de la personne, de l'adaptation à chaque situation.]
+                    La relation de confiance est au cœur de mon travail. Je veille à adapter chaque séance à votre réalité du moment, à votre rythme, sans jamais vous brusquer. Il n'y a pas de bonne ou mauvaise façon de vivre ce chemin — il y a le vôtre, et je vous accompagne à l'emprunter.
                 </p>
                 <p style="color: var(--color-text-body); line-height: 1.85;">
                     Ensemble, nous créons un espace sécurisant pour apaiser, comprendre et avancer vers plus d'équilibre et de sens.
                 </p>
             </div>
             <div>
-                <img src="img/hero.jpg" alt="Accompagnement bienveillant" class="approach-img">
+                <img src="img/bckg_champ.jpg" alt="Accompagnement bienveillant" class="approach-img">
             </div>
         </div>
     </section>
@@ -78,21 +87,21 @@
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>Sophrologie</h3>
-                    <p>[À compléter — description de votre pratique de la sophrologie, ce qu'elle apporte, pour qui, dans quels contextes vous l'utilisez.]</p>
+                    <p>Méthode qui unit corps et esprit, la sophrologie s'appuie sur des exercices de respiration, de détente musculaire et de visualisation. Elle permet d'apaiser le mental, de mieux gérer ses émotions et de développer ses ressources intérieures. Je l'utilise dans de nombreuses situations : stress, anxiété, troubles du sommeil, préparation à un événement important ou simplement pour retrouver un mieux-être durable.</p>
                 </article>
                 <article class="card">
                     <div class="card-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5v6a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
                     </div>
                     <h3>Hypnose SAJECE</h3>
-                    <p>[À compléter — description de l'hypnose SAJECE, comment elle se distingue, ce qu'elle permet, dans quels cas vous y faites appel.]</p>
+                    <p>L'hypnose SAJECE est une approche douce et respectueuse qui permet d'accéder à des niveaux de conscience plus profonds pour faciliter des changements durables. Contrairement aux idées reçues, vous restez acteur·trice de votre processus à tout moment. J'y fais appel notamment pour libérer des blocages émotionnels, accompagner les phobies, les douleurs chroniques ou encore les dépendances.</p>
                 </article>
                 <article class="card">
                     <div class="card-icon">
                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
                     </div>
                     <h3>Coaching Ikigai</h3>
-                    <p>[À compléter — description de l'approche Ikigai, ce qu'elle apporte dans la reconnexion à soi, la recherche de sens, l'alignement de vie.]</p>
+                    <p>Le coaching Ikigai s'inspire du concept japonais qui désigne « la raison d'être » — ce qui donne envie de se lever chaque matin. À travers des questionnements guidés, il aide à clarifier ses valeurs, ses envies profondes et ses aspirations pour (re)trouver un sens et un alignement dans sa vie. Un outil précieux lors des transitions de vie ou des périodes de questionnement intérieur.</p>
                 </article>
             </div>
         </div>
@@ -126,7 +135,7 @@
     <!-- Citation -->
     <div class="quote-block">
         <span class="quote-mark">"</span>
-        <blockquote>[Votre citation favorite ou une phrase qui reflète votre vision de l'accompagnement.]</blockquote>
+        <blockquote>Le changement ne vient pas de l'extérieur. Il naît dans cet espace intérieur que nous apprenons, ensemble, à habiter.</blockquote>
         <div class="quote-divider"></div>
     </div>
 
@@ -179,5 +188,24 @@
     </div>
 </footer>
 
+<script>
+(function(){
+    var toggle = document.getElementById("navToggle");
+    var nav = document.querySelector(".main-nav");
+    if (!toggle || !nav) return;
+    toggle.addEventListener("click", function(){
+        nav.classList.toggle("open");
+        toggle.classList.toggle("open");
+        document.body.classList.toggle("nav-open");
+    });
+    nav.querySelectorAll(".nav-link").forEach(function(link){
+        link.addEventListener("click", function(){
+            nav.classList.remove("open");
+            toggle.classList.remove("open");
+            document.body.classList.remove("nav-open");
+        });
+    });
+})();
+</script>
 </body>
 </html>
